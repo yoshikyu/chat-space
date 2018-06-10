@@ -23,7 +23,7 @@
 |password|string|null: failse|
 
 ### Asociation
-- has_many :members
+- has_many :groups, through: :members
 - has_many :messages
 
 
@@ -45,10 +45,10 @@
 
 |Column|Type|Options|
 |------|----|-------|
-|group_name|string|null: false|
+|name|string|null: false|
 
 ### Asociation
-- has_many :members
+- has_many :users, through: :members
 - has_many :messages
 
 
