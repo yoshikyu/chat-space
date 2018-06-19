@@ -90,12 +90,6 @@ height: 100vh;
 		    	text-align: center;
 		    	padding-top: 5px;
 		    	box-sizing: border-box;
-
-		    		// .right--header__edit{
-		    		// color: $skyBlueColor;
-		    		// text-align: center;
-		    		// margin: auto;
-	       //    }
 	        } 
 	    }	   
     .messages{
@@ -135,18 +129,20 @@ height: 100vh;
   		background-color: $paleGrayColor;
 			form{			  
 			  padding-top: 20px;
-			  padding-left: 40px;				
+			  padding-left: 40px;	
+			  position: relative;
+			  z-index: 10;			
 				box-sizing: border-box;		
 				float:left;	
   		  @include clearfix();
 				input{
-					width: calc(100vw - 495px);
+					width: calc(100vw - 485px);
 					height: 50px;
 					font-size: 16px;
 					padding-left: 16px;
 					box-sizing: border-box;
-					border-color: white;
-				}
+					border: none;
+				}				
 			}	
 			.bottom--content__center{
 				height: 50px;
@@ -154,16 +150,11 @@ height: 100vh;
 				float: left;
 				background-color: white;
 				position: relative;
+				z-index: 20;
 				top: 20px;
 				padding-top: 14px;
 				padding-right: 10px;
 				box-sizing: border-box;
-
-		   //  .i.fa.fa-picture-o.fa-1x{
-					// position: relative;
-					// top: 17px;
-					// left: 10px;
-				 //  }
 			}
 			.bottom--content__right{
 				background-color: $skyBlueColor;
@@ -175,8 +166,7 @@ height: 100vh;
 				position: relative;
 				top: 20px;
 				text-align: center;
-				padding-top: 14px;
-				padding-right: 10px;
+				padding-top: 14px; 
 				margin-left: 15px;
 				box-sizing: border-box;
 			}
