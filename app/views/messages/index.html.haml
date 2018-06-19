@@ -1,0 +1,37 @@
+
+!!!
+.wrapper
+  .notification チャットグループが作成されました。
+  .side-bar
+    .header 
+      .header--text sample
+      =link_to "https://www.yahoo.co.jp" do
+        %i.fa.fa-pencil-square-o.fa-1x
+      =link_to "https://www.yahoo.co.jp" do 
+        %i.fa.fa-cog.fa-1x
+    .groups     
+      .group
+        .group--name YK
+        .group--message test message
+  .chat 
+    .header
+      .left--header YK
+      .left--header__member Member:キュウイ
+      .right--header Edit
+        
+    .messages 
+      .message.clearfix 
+        .upper--message
+          .upper--message__address yoshikiki1109@yahoo.co.jp
+          .upper--message__date 2018/06/30
+        .message--content hello
+      .bottom--message
+    .bottom--contents
+      %form
+        %input.text{placeholder: "type a message"}
+      .bottom--content__center
+        %label
+          %i.fa.fa-picture-o.fa-1x
+          %input{type: "file", style: "display:none"}
+      .bottom--content__right Send
+
