@@ -27,11 +27,9 @@
         .message--content hello
       .bottom--message
     .bottom--contents
-      %form
-        %input.text{placeholder: "text a message"}
-      .bottom--content__center  
-        %label
-          %i.fa.fa-picture-o.fa-1x
-          %input{type: "file", style: "display:none", :class => "Photo"}
+      %input{type: "text", placeholder: "text a message"}  
+      %label
+        %i.fa.fa-picture-o.fa-1x
+        %input{type: "file", style: "display:none", :class => "Photo"}
       .bottom--content__right Send
 
