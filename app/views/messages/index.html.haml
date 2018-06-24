@@ -1,18 +1,6 @@
-
-!!!
 .wrapper
   .notification チャットグループが作成されました。
-  .side-bar
-    .header 
-      .header--text sample
-      =link_to "#" do
-        %i.fa.fa-pencil-square-o.fa-1x
-      =link_to "#" do 
-        %i.fa.fa-cog.fa-1x
-    .groups     
-      .group
-        .group--name YK
-        .group--message test message
+  = render 'shared/side-bar'
   .chat 
     .header
       .left--header YK
