@@ -1,0 +1,168 @@
+.wrapper{
+  max-width: 100vw;
+  height: 100vh;
+  .notification{
+    height:28px;
+    width: 100vw;
+    background-color: #38AEF0;
+    font-size: 16px;
+    color: $whiteColor;
+    text-align: center;
+  }
+  .side-bar{
+    float: left;
+    .header{
+      width: 300px;
+      height: 100px;
+      background-color: $darkBlueColor;
+      position: relative;
+      .header--text{
+        width: 260px;
+        color:$whiteColor;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 35px 20px;
+        box-sizing: border-box;
+      }
+      .fa.fa-pencil-square-o.fa-1x{
+        color: $whiteColor;
+        position: absolute;
+        top: 35px;
+        right: 38px;
+      }
+      .fa.fa-cog.fa-1x{
+        color: $whiteColor;
+        position: absolute;
+        top: 35px;
+        right:20px;
+      }
+    }		
+    .groups{
+      width: 300px;
+      height: calc(100vh - 128px);
+      background-color: $lightBlueColor;
+      .group{
+        .group--name{
+          color: $whiteColor;
+          padding: 20px 20px;
+          font-size: 15px;
+          box-sizing: border-box;
+        }
+        .group--message{
+          color: $whiteColor;
+          font-size: 11px;
+          padding: 0 20px;
+          box-sizing: border-box;
+        }
+      }
+    }  
+  }
+  .chat{
+    float: left;
+    .header{
+      height: 100px;
+      width: calc(100vw - 300px);
+      border-bottom: solid $paleGrayColor;
+      position: relative;
+      .left--header{
+        font-size: 20px;
+        color: $heavyGrayColor;
+        padding-top: 35px;
+        padding-left: 40px;
+        box-sizing: border-box;
+      }
+      .left--header__member{
+        font-size: 12px;
+        color: $lightGrayColor;
+        padding-top: 15px;
+        padding-left:40px; 		
+        box-sizing: border-box;
+      }
+      .right--header{
+        position: absolute;
+        top: 28px;
+        right:40px;
+        height: 40px;
+        width: 60px;
+        border: solid $skyBlueColor;
+        color: $skyBlueColor;
+        text-align: center;
+        padding-top: 5px;
+        box-sizing: border-box;
+      }
+    }	   
+    .messages{
+      height: 100px;
+      width: calc(100vw - 300px);
+      .message{
+        position: relative;
+        top: 46px;
+        left: 40px; 
+        .upper--message{
+          @include clearfix();
+          .upper--message__address{
+            float: left;
+            color: $heavyGrayColor;
+            padding-right: 10px;
+            size: 16px;
+            font-weight: bold;
+            color: $blackColor;
+          }
+          .upper--message__date{
+            float: left;
+            color: $lightGrayColor;
+            size: 12px;
+          }
+        }
+        .message--content{
+          padding-top: 10px;
+          padding-bottom:  40px;
+        }
+      } 
+    }
+    .bottom--contents{
+      position: absolute;
+      bottom: 0;
+      width: calc(100vw - 300px);
+      height: 90px;
+      background-color: $paleGrayColor;
+      input{
+        width: calc(100vw - 513px);
+        height: 50px;
+        font-size: 16px;
+        position: absolute;
+        top: 20px;
+        left: 40px;
+        padding-left: 10px;
+        padding-right: 15px;
+        box-sizing: border-box;
+        border: none;		
+        box-sizing: border-box;		
+        float:left;	
+        @include clearfix();
+      }
+      label{
+        i.fa.fa-picture-o.fa-1x{
+          float: right;
+          position: relative;
+          top: 35px;
+          right: 183px;
+        }
+      }
+      .bottom--content__right{
+        background-color: $skyBlueColor;
+        height: 50px;
+        width: 100px;
+        color: white;
+        size: 16px;
+        float: right;
+        position: relative;
+        top: 20px;
+        right: 40px;
+        text-align: center;
+        padding-top: 14px; 
+        box-sizing: border-box;
+      }
+    }
+  }
+}

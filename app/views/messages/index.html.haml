@@ -1,0 +1,22 @@
+.wrapper
+  .notification チャットグループが作成されました。
+  = render 'shared/side-bar'
+  .chat 
+    .header
+      .left--header YK
+      .left--header__member Member:キュウイ
+      .right--header Edit       
+    .messages 
+      .message.clearfix 
+        .upper--message
+          .upper--message__address yoshikiki1109@yahoo.co.jp
+          .upper--message__date 2018/06/30
+        .message--content hello
+      .bottom--message
+    .bottom--contents
+      %input{type: "text", placeholder: "text a message"}  
+      %label
+        %i.fa.fa-picture-o.fa-1x
+        %input{type: "file", style: "display:none", class: "Photo"}
+      .bottom--content__right Send
+
