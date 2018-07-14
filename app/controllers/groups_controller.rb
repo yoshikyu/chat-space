@@ -1,6 +1,6 @@
 class GroupsController < ApplicationController
 	before_action :set_group, only: [:edit, :update]
-	def index	
+	def index	 
 	end	
 
   def new #グループの新規作成画面
@@ -9,7 +9,7 @@ class GroupsController < ApplicationController
   end
 
   def create #グループ作成の可否に合わせた処理
-  	@group = Group.new(group_params)
+  	@group = Group.new(groups_params)
   	if @group.save
   		redirect_to root_path, notice: 'グループを作成しました' #成功した時
   	else
@@ -25,8 +25,8 @@ class GroupsController < ApplicationController
   end
 
   private
-  def group_params
-  	params.require(:group).permit(:name, { :user_ids =>[]})
+  def groups_params
+  	params.require(:group).permit(:name, {:user_ids =>[]})
   end
 
   def set_group

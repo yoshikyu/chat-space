@@ -3,20 +3,20 @@
   = render 'shared/side-bar'
   .chat 
     .header
-      .left--header YK
-      .left--header__member Member:キュウイ
+      .left--header YK 
+      %ul.left--header__members
+        Member：
+        - @group.users.each do |user| 
+          %li.group--member #{user.name}
       .right--header Edit       
-    .messages 
-      .message.clearfix 
-        .upper--message
-          .upper--message__address yoshikiki1109@yahoo.co.jp
-          .upper--message__date 2018/06/30
-        .message--content hello
-      .bottom--message
+    .messages
+      = render @messages
     .bottom--contents
-      %input{type: "text", placeholder: "text a message"}  
-      %label
-        %i.fa.fa-picture-o.fa-1x
-        %input{type: "file", style: "display:none", class: "Photo"}
-      .bottom--content__right Send
-
+      .form
+        = form_for [@group, @message] do |f|
+          = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+          .form__mask
+            = f.label :image, class: 'form__mask__image' do
+              = fa_icon 'picture-o', class: 'icon'
+              = f.file_field :image, class: 'hidden'
+          = f.submit 'Send', class: 'form__submit'
