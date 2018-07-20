@@ -1,6 +1,6 @@
 $(function(){
-  function buildHTML(message){
-  	var html =
+　　function buildHTML(message){
+　　  var html =
 　　　　　　`<div class="message clearfix">
             <div class="upper--message">
               <div class="upper--message__user-name">
