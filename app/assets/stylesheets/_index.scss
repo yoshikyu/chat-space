@@ -1,9 +1,11 @@
 .wrapper{
   max-width: 100vw;
   height: 100vh;
+  position: fixed;
   .chat{
     float: left;
     .header{
+      top: 0;
       height: 100px;
       width: calc(100vw - 300px);
       border-bottom: solid $paleGrayColor;
@@ -40,15 +42,20 @@
       }
     }	   
     .messages{
-      height: 100px;
+      overflow:scroll; 
+      max-width: 100vw;
+      height: calc(835px - 103px - 90px);
       width: calc(100vw - 300px);
+      padding-bottom: 100px;
+      box-sizing:border-box;
+      
       .message{
+        padding-left: 40px;
         position: relative;
-        top: 46px;
-        left: 40px; 
+        box-sizing:border-box;
         .upper--message{
           @include clearfix();
-          .upper--message__address{
+          .upper--message__user-name{
             float: left;
             color: $heavyGrayColor;
             padding-right: 10px;
@@ -65,10 +72,14 @@
         .message--content{
           padding-top: 10px;
           padding-bottom:  40px;
+          .lower-message__image{
+            padding-bottom: 23px;
+            display: block;
+          }
         }
       } 
     }
-    .bottom--contents{
+    .form{
       position: absolute;
       bottom: 0;
       width: calc(100vw - 300px);
