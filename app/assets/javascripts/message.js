@@ -37,6 +37,9 @@ $(function(){
 		$('.form__message').val('')
 		$('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' )
 		$('.form__submit').removeAttr('disabled')
+		$(".lower-message__image").error(function(){
+			$(this).remove();
+});
 	})
 
 	.fail(function(){
