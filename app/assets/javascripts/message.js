@@ -13,36 +13,33 @@ $(function(){
         <div class="message--content"> 
           <p class="bottom--message">
             ${ message.content }
-            <img src = '${ message.image.url}', class='lower-message__image'>
+            ${ message.image? `
+              <img src = '${ message.image }'>` :''}
           </p>
         </div>
       <div>`
-    return html;
-  }
-　　$('#new_message').on('submit', function(e){
-	　  e.preventDefault();
-	　  var formData = new FormData(this);
-	　  var url = $(this).attr('action')  
-	　  $.ajax({
-		　  url:url,
-		　  type: "POST",
-		　  data: formData,
-		　  dataType:'json',
-		　  processData: false,
-		　  contentType: false
-	　　 })
-　　.done(function(data){
-		  var html = buildHTML(data);
-		  $('.messages').append(html)
-		  $('.form__message').val('')
-		  $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' )
-		  $('.form__submit').removeAttr('disabled')
-		  $(".lower-message__image").error(function(){
-			  $(this).remove();
-      });
-	  })
-	  .fail(function(){
-		  alert('error');
-	  })
-  })
+    return html
+  };
+
+  $('#new_message').on('submit', function(e){
+    e.preventDefault();
+    var formData = new FormData(this);
+    var url = $(this).attr('action')  
+    $.ajax({
+      url:url,
+      type: "POST",
+      data: formData,
+      dataType:'json',
+      processData: false,
+      contentType: false
+    })
+    .done(function(data){
+      var html = buildHTML(data);
+      $('.messages').append(html)
+      $('.form__message').val('')
+      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' )
+      $('.form__submit').removeAttr('disabled')
+      $(".new_message")[0].reset()
+    })
+  });
 });
