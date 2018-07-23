@@ -1,6 +1,3 @@
-
-
-
 $(function(){
   function buildHTML(message){
     var html =
