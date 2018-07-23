@@ -20,7 +20,6 @@ $(function(){
       <div>`
     return html
   };
-
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -32,14 +31,13 @@ $(function(){
       dataType:'json',
       processData: false,
       contentType: false
-    })
+    }) 
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      $('.form__message').val('')
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' )
+      scrollDown('.messages')
       $('.form__submit').removeAttr('disabled')
-      $(".new_message")[0].reset()
+      $('#new_message')[0].reset()
     })
   });
 });
