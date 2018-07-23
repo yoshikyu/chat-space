@@ -3,12 +3,12 @@
   = render 'shared/side-bar'
   .chat 
     .header
-      .left--header YK 
+      .left--header #{@group.name}
       %ul.left--header__members
         Member：
         - @group.users.each do |user| 
           %li.group--member #{user.name}
-      .right--header Edit       
+      .right--header Edit    
     .messages
       = render @messages
     .bottom--contents
