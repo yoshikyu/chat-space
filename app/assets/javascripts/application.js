@@ -15,6 +15,5 @@
 //= require_tree .
 
   function scrollDown(name){
-  $(name).animate({scrollTop: $(name)[0].scrollHeight},4500,'linear' );
+    $(name).animate({scrollTop: $(name)[0].scrollHeight},4500,'linear' );
   }
-  
