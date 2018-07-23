@@ -1,3 +1,6 @@
+
+
+
 $(function(){
   function buildHTML(message){
     var html =
@@ -20,6 +23,9 @@ $(function(){
       <div>`
     return html
   };
+  function scrollDown(){
+    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' );
+  }
   $('#new_message').on('submit', function(e){
     e.preventDefault();
     var formData = new FormData(this);
@@ -35,7 +41,7 @@ $(function(){
     .done(function(data){
       var html = buildHTML(data);
       $('.messages').append(html)
-      scrollDown('.messages')
+      scrollDown()
       $('.form__submit').removeAttr('disabled')
       $('#new_message')[0].reset()
     })
