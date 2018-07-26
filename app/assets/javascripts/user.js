@@ -34,8 +34,8 @@ $(function(){
     $('.chat-group-form__field--bottom').append(html);
   }
 
-	$("#user-search-field").on("keyup", function(){
-		var input = $(this).val();
+  $("#user-search-field").on("keyup", function(){
+    var input = $(this).val();
     $.ajax({
     	type: "GET",
     	url:"/users",
