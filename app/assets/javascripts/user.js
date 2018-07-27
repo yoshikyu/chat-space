@@ -24,13 +24,14 @@ $(function(){
 
   function addUserToGroup(userId, userName){
     var html =
-      `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
+      `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-${ userId }'>
+        <input name='group[user_ids][]' type='hidden' value='${ userId }'>
         <p class='chat-group-user__name'>
           ${ userName }
         </p>
         <a class='user-search-remove chat-group-user__btn chat-group-user__btn--remove js-remove-btn'>削除</a>
       </div>`
-    $('.chat-group-form__field--bottom').append(html);
+    $('#chat-group-users').append(html);
   }
 
   $("#user-search-field").on("keyup", function(){
