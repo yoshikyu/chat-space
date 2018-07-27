@@ -25,7 +25,6 @@ $(function(){
   function addUserToGroup(userId, userName){
     var html =
       `<div class='chat-group-user clearfix js-chat-member' id='chat-group-user-8'>
-        <input name='group[user_ids][]' type='hidden' 'value=${ userId }'>
         <p class='chat-group-user__name'>
           ${ userName }
         </p>
@@ -64,6 +63,7 @@ $(function(){
     $($(this).parent()).remove();
     addUserToGroup(userId, userName);
   })
+
   $(document).on('click', '.js-remove-btn', function(){
     $($(this).parent()).remove();
   })
