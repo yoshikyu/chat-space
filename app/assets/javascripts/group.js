@@ -43,7 +43,6 @@ $(function(){
       })
     }, 5000 );
   };
-
   if (window.location.href.match(/\/groups\/\d+\/messages/)){
 	  interval()
   }else{
