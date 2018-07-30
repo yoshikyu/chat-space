@@ -4,9 +4,10 @@ class MessagesController < ApplicationController
   def index
     @message = Message.new
     @messages = @group.messages.includes(:user)
-    respond_to do |format|
+    @new_messages = @messages.where("id>#{params[:id]}")
+    respond_to do |format|  
       format.html
-      format.json{@messages}
+      format.json
     end
   end
 
@@ -22,8 +23,7 @@ class MessagesController < ApplicationController
         format.html{ redirect_to group_messages_path(@group), notice: 'メッセージが送信されませんでした' }
         format.json
       end
-    end  
-    
+    end    
   end
 
   private
