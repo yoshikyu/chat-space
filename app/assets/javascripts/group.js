@@ -1,5 +1,5 @@
 $(function(){
-	function buildHTML(message){
+  function buildHTML(message){
     var html =
       `<div class="message clearfix" data-message-id="${message.id}">
         <div class="upper--message">
