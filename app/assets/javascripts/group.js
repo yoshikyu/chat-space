@@ -31,16 +31,16 @@ $(function(){
         data: {id: lastId}
   	  })
 
-  	.done(function(messages){
-      messages.forEach(function(message){
-        var insertHTML = '';
-        insertHTML += buildHTML(message);
-        if (message)
-          {$('.messages').append(insertHTML);
-          };
+  	  .done(function(messages){
+        messages.forEach(function(message){
+          var insertHTML = '';
+          insertHTML += buildHTML(message);
+          if (message)
+            {$('.messages').append(insertHTML);
+            };
         });
-      $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' );
-  	})
+        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear');
+      })
     }, 5000 );
   };
 
@@ -49,4 +49,4 @@ $(function(){
   }else{
   	clearInterval(interval);
   }
- });
+});
