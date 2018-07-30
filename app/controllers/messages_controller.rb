@@ -22,7 +22,7 @@ class MessagesController < ApplicationController
         format.html{ redirect_to group_messages_path(@group), notice: 'メッセージが送信されませんでした' }
         format.json
       end
-    end    
+    end
   end
 
   private
