@@ -14,18 +14,18 @@ $(function(){
           <p class="bottom--message">
             ${ message.content }
             ${ message.image?
-              `<img src = '${ message.image }', width="200", height="150", class='lower-message__image'>` :''}
+              `<img src = '${ message.image }', class='lower-message__image'>` :''}
           </p>
         </div>
       <div>`
     return html
   };
   function scrollDown(){
-    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' );
+    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500, 'linear' );
   }
   function interval(){
     setInterval(function(){
-      var lastId = $('.message:last').data('messageId');
+      var lastId = $('.message:last').data('message-id');
     	$.ajax({
         url: location.href,
         dataType:'json',
@@ -43,7 +43,7 @@ $(function(){
       })
     }, 5000 );
   };
-  if (window.location.href.match(/\/groups\/\d+\/messages/)){
+  if (window.location.pathname.match(/\/groups\/\d+\/messages/)){
 	  interval()
   }else{
   	clearInterval(interval);
