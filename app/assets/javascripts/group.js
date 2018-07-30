@@ -20,17 +20,17 @@ $(function(){
       <div>`
     return html
   };
-  
+  function scrollDown(){
+    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear' );
+  }
   function interval(){
     setInterval(function(){
       var lastId = $('.message:last').data('messageId');
-      console.log(lastId);
     	$.ajax({
         url: location.href,
         dataType:'json',
         data: {id: lastId}
   	  })
-
   	  .done(function(messages){
         messages.forEach(function(message){
           var insertHTML = '';
@@ -39,7 +39,7 @@ $(function(){
             {$('.messages').append(insertHTML);
             };
         });
-        $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight},4500,'linear');
+        scrollDown()
       })
     }, 5000 );
   };
