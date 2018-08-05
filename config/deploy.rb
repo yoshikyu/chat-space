@@ -1,7 +1,7 @@
 # config valid for current version and patch releases of Capistrano
 lock "~> 3.11.0"
 
-set :application, "chat-space"
+set :application, 'chat-space'
 set :repo_url, 'git@github.com:yoshikyu/chat-space.git'
 
 set :linked_dirs, fetch(:linked_dirs, []).push('log', 'tmp/pids', 'tmp/cache', 'tmp/sockets', 'vendor/bundle', 'public/system', 'public/uploads')
@@ -20,6 +20,7 @@ set :keep_releases, 5
 set :linked_files, %w{ config/secrets.yml }
 
 # 元々記述されていた after 「'deploy:publishing', 'deploy:restart'」以下を削除して、次のように書き換え
+
 
 
   desc 'upload secrets.yml'
