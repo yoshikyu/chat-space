@@ -82,17 +82,18 @@
     }
   }
 
-  .chat-group-user {
+  .chat-group-user.clearfix{
     padding: 0 15px;
     line-height: 50px;
     font-size: 14px;
-    border-bottom: 1px solid #ddd;
     &:after {
       content: "";
       clear: both;
       display: block;
     }
-
+    .js-chat-member{
+      border-bottom: 1px solid #ddd;
+    }
     .chat-group-user__name {
       float: left;
     }
