@@ -59,6 +59,9 @@
     .chat-group-form__field--right {
       float: right;
       width: 70%;
+      .js-chat-member{
+      border-bottom: 1px solid #ddd;
+      }
     }
 
     .chat-group-form__label {
