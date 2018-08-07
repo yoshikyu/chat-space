@@ -39,6 +39,10 @@
         text-align: center;
         padding-top: 5px;
         box-sizing: border-box;
+        a{
+          text-decoration: none;
+          color: $skyBlueColor;
+        }
       }
     }	   
     .messages{
@@ -71,7 +75,7 @@
         }
         .message--content{
           padding-top: 10px;
-          padding-bottom:  40px;
+          padding-bottom:  25px;
           .lower-message__image{
             padding-bottom: 23px;
             display: block;
