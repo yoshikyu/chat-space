@@ -41,7 +41,7 @@ $(function(){
         });
         scrollDown()
       })
-    }, 5000 );
+    }, 10000 );
   };
   if (window.location.pathname.match(/\/groups\/\d+\/messages/)){
 	  interval()
