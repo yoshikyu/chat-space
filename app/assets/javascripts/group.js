@@ -21,7 +21,7 @@ $(function(){
     return html
   };
   function scrollDown(){
-    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 4500, 'linear' );
+    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 3000, 'swing' );
   }
   function interval(){
     setInterval(function(){
@@ -37,9 +37,9 @@ $(function(){
           insertHTML += buildHTML(message);
           if (message)
             {$('.messages').append(insertHTML);
-            };
+          };
         });
-        scrollDown()
+         scrollDown()
       })
     }, 10000 );
   };
