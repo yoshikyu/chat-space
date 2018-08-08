@@ -21,7 +21,7 @@ $(function(){
     return html
   };
   function scrollDown(){
-    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 3000, 'swing' );
+    $('.messages').animate({scrollTop: $('.messages')[0].scrollHeight}, 2000, 'swing' );
   }
   function interval(){
     setInterval(function(){
