@@ -4,6 +4,7 @@
       = message.user.name
     .upper--message__date 
       = message.created_at  
+    = render partial: 'likes/like', locals: {message: message}
   .message--content 
     - if message.content.present?
       %p.bottom--message

@@ -1,0 +1,16 @@
+- if user_signed_in? && message.user_id != current_user.id
+  -if message.like_user(current_user.id)
+    = button_to like_path(message), method: :delete, class: "unlike", title: "#{message.id}", id: "unlike-button-#{message.id}", remote: true do
+      =fa_icon 'heart', class: 'icon'
+      %span
+        = message.likes_count
+  -else
+    = button_to message_likes_path(message), method: :post, class: "like", title:"#{message.id}", id: "like-button-#{message.id}", remote: true do
+      = fa_icon 'heart-o', class: 'icon'
+      %span
+        = message.likes_count
+- else
+  = fa_icon 'heart', class: 'icon'
+  %span
+    = message.likes_count
+
