@@ -8,7 +8,7 @@ $(function(){
 		return html
 	};
 
-$('.unlike').on('click', function(e){
+$(document).on('click', '.unlike', function(e){
 	console.log("destroyするよ");
 	e.preventDefault();
 	var data = $(this).attr('title');

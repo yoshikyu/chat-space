@@ -9,7 +9,7 @@ $(function(){
 		  </input>`
 		return html
 	};
-	$('.like').on('click', function(e){
+	$(document).on('click', '.like', function(e){
 		console.log(" createするよ");
 		e.preventDefault();
 		var data = $(this).attr('title');
