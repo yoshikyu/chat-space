@@ -37,9 +37,9 @@ $(function(){
           insertHTML += buildHTML(message);
           if (message)
             {$('.messages').append(insertHTML);
+           scrollDown()
           };
         });
-         scrollDown()
       })
     }, 10000 );
   };

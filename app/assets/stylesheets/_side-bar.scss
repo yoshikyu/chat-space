@@ -36,6 +36,7 @@
       width: 300px;
       height: calc(100vh - 100px);
       background-color: $lightBlueColor;
+      overflow: scroll;
       .group{
         .group__name{
           color: $whiteColor;
