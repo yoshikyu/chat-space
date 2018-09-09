@@ -10,7 +10,6 @@ $(function(){
 		return html
 	};
 	$(document).on('click', '.like', function(e){
-		console.log(" createするよ");
 		e.preventDefault();
 		var data = $(this).attr('title');
 		var url = `/messages/${data}/likes`;
@@ -26,7 +25,6 @@ $(function(){
 	  	var html =buildHTML(data);
 	  	var like_button=$(`#like-button-${data.message_id}`);
 	  	like_button.replaceWith(html);
-	  	// $("#unlike-button").next().remove();
 	  	$("#unlike-button").parent().attr('action', `/likes/${data.message_id}`);
 	  });
   });

@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+ class UsersController < ApplicationController
 
   def index 
     @users = User.where("name LIKE(?) && #{params[:keyword].present?}", "%#{params[:keyword]}%").where.not(name: current_user.name)

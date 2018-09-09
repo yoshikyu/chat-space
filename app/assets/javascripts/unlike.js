@@ -9,7 +9,6 @@ $(function(){
 	};
 
 $(document).on('click', '.unlike', function(e){
-	console.log("destroyするよ");
 	e.preventDefault();
 	var data = $(this).attr('title');
 	var url =`/likes/${data}`;
